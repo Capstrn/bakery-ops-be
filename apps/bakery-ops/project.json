@@ -1,0 +1,24 @@
+{
+  "name": "bakery-ops",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/bakery-ops/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "bakery-ops:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "bakery-ops:build:development"
+        },
+        "production": {
+          "buildTarget": "bakery-ops:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
